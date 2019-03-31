@@ -1,7 +1,6 @@
 {
   "name": "property_management_system",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "lite-server"
@@ -11,5 +10,16 @@
   "dependencies": {
     "lite-server": "^2.4.0",
     "mysql": "^2.16.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cartman37/property_management_system.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Cartman37/property_management_system/issues"
+  },
+  "homepage": "https://github.com/Cartman37/property_management_system#readme",
+  "description": ""
 }
