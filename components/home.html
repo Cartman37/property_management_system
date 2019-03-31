@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<!-- navigation bar -->
+<header>
+	<div id="top-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="home-account">
+						<a href="#">Home</a>
+						<a ng-click="goToLogin()">My account</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="main-header">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="logo">
+						<a href="#"><img src="images/icons/icon-1.png" alt="Company Icon" ></a>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="main-menu">
+						<ul>
+							<li><a href="#">Client</a></li>
+							<li><a href="#">Property</a></li>
+							<li><a href="#">Appointment</a></li>
+							<li><a href="#">Item</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="search-box">
+						<form name="search_form" method="get" class="search_form">
+							<input id="search" type="text" />
+							<input type="submit" id="search-button" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<!-- slides -->
+<div id="slider">
+	<div class="flexslider">
+		<ul class="slides">
+			<li>
+				<div class="slider-caption">
+					<h1>New House Model</h1>
+					<p>This split level home houses 2,230 sq. ft. and wonderful 11’ ceilings in a sunken great room.<br><br>
+						The Sagamore provides 4 bedrooms and a 2nd floor “flex” room ideal for lounging on a day off.<br><br>
+						With 3 optional elevations such as modern façade and gabled roof, this home is an amazing<br><br>
+						place to live.</p>
+					<a href="#">View Properties</a>
+				</div>
+				<img src="images/slides/slides-image-1.png" alt="" />
+			</li>
+			<li>
+				<div class="slider-caption">
+					<h1>New House Model</h1>
+					<p>In this this gorgeous 2,573 sq. ft. home there are 3 different elevation styles. <br><br>
+						With 4 bedrooms, an unfinished basement rec room, 2nd floor family retreat <br><br>
+						and laundry room on the main floor, this home is perfect for any family. <br><br>
+						The Charleston provides lots of room and options to customize your home <br><br>
+						how you see fit.</p>
+					<a href="#">View Properties</a>
+				</div>
+				<img src="images/slides/slides-image-2.png" alt="" />
+			</li>
+			<li>
+				<div class="slider-caption">
+					<h1>New House Model</h1>
+					<p>With a total of 3,464 sq. ft. this is one of our largest and most luxurious models. <br><br>
+						With 4 bedrooms, a 2nd floor family retreat, breakfast nook, dining room, den, <br><br>
+						and 1st floor laundry, the Willowstone is the perfect home for a large single family, <br><br>
+						with large amounts of room and 2 elevations to choose from.</p>
+					<a href="#">View Properties</a>
+				</div>
+				<img src="images/slides/slides-image-3.png" alt="" />
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+<!-- welcome message -->
+<div id="welcome">
+	<div class="form_container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="heading-section">
+					<h2>Welcome</h2>
+					<img src="images/icons/under-heading.png" alt="" >
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<ul class="slides">
+					<li>
+						<div class="testimonails-content">
+							<p>Please login to see your appointments!</p>
+							<h6><a ng-click="goToLogin()">Login</a> or <a ng-click="register()">Register</a></h6>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
