@@ -5,4 +5,9 @@
       <path value="$PROJECT_DIR$/angularjs-mysql" />
     </include_path>
   </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="localhost" id="6c6e5599-ca23-48a5-92fe-ad823ac8ae6b" name="localhost" port="3000" />
+    </servers>
+  </component>
 </project>
