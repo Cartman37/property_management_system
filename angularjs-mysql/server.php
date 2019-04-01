@@ -9,7 +9,7 @@ session_start();
 
 $response = [];
 
-$con = new mysqli('localhost', 'root', '', 'propertymanagement');
+$con = mysqli_connect('localhost', 'root', '', 'propertymanagement');
 
 if($con->connect_error) {
     die("Connect failed: %s\n(" . $con->connect_errno . ")" . $con->connect_error);
