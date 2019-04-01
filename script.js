@@ -80,7 +80,7 @@ app.controller('homeCtrl', function($scope, $location) {
 	$scope.goToLogin = function() {
 		$location.path('/login');
 	};
-	$scope.regiser = function() {
+	$scope.register = function() {
 		$location.path('/register');
 	}
 });
@@ -90,14 +90,14 @@ app.controller('loginCtrl', function($scope, $http, $location, user) {
 		var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: 'http://localhost/angularjs-mysql/server.php',
+			url: '/angularjs-mysql/server.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
 			},
 			data: 'username='+username+'&password='+password
 		}).then(function(response) {
-			if(response.data.status == 'loggedin') {
+			if(response.data.status === 'loggedin') {
 				user.saveData(response.data);
 				$location.path('/dashboard');
 			} else {

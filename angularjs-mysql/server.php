@@ -9,14 +9,18 @@ session_start();
 
 $response = [];
 
-$con = mysqli_connect('localhost', 'root', '', 'test_site');
+$con = new mysqli('localhost', 'root', '', 'propertymanagement');
 
-$username = mysqli_real_escape_string($con, $_POST['username']);
-$password = mysqli_real_escape_string($con, $_POST['password']);
+if($con->connect_error) {
+    die("Connect failed: %s\n(" . $con->connect_errno . ")" . $con->connect_error);
+}
 
-$query = "SELECT * FROM `users` WHERE username='$username' AND password='$password'";
+$username = $con->real_escape_string($_POST['username']);
+$password = $con->real_escape_string($_POST['password']);
 
-$result = mysqli_query($con, $query);
+$query = "SELECT * FROM `user` WHERE userName='$username' AND userPass='$password'";
+
+$result = $con->query($query);
 
 if(mysqli_num_rows($result) > 0) {
 	$response['status'] = 'loggedin';
@@ -28,6 +32,5 @@ if(mysqli_num_rows($result) > 0) {
 }
 
 echo json_encode($response);
-/*
-print_r($_POST);*/
->
+
+$con->close();
