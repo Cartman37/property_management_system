@@ -8,10 +8,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.7.8",
     "lite-server": "^2.4.0",
-    "mysql": "^2.16.0",
-    "mysqli": "^3.0.6"
+    "mysql": "^2.16.0"
   },
   "devDependencies": {},
   "repository": {
