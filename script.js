@@ -74,7 +74,7 @@ app.service('user', function() {
 		id = "";
 		loggedin = false;
 	}
-})
+});
 
 app.controller('homeCtrl', function($scope, $location) {
 	$scope.goToLogin = function() {
@@ -90,7 +90,7 @@ app.controller('loginCtrl', function($scope, $http, $location, user) {
 		var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: '/angularjs-mysql/server.php',
+			url: 'http://localhost/angularjs-mysql/server.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -120,7 +120,7 @@ app.controller('dashboardCtrl', function($scope, user, $http) {
 			},
 			data: 'newPass='+password+'&id='+user.getID()
 		}).then(function(response) {
-			if(response.data.status == 'done') {
+			if(response.data.status === 'done') {
 				alert('Password updated');
 			} else {
 				alert('CSRF maybe?');
