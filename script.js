@@ -24,6 +24,24 @@ app.config(function($routeProvider, $locationProvider) {
 		},
 		templateUrl: './components/dashboard.html',
 		controller: 'dashboardCtrl'
+	}).when('/items', {
+		templateUrl: './components/item/items.html',
+		controller: 'itemCtrl'
+	}).when('/appointments', {
+		templateUrl: './components/appointment/appointments.html',
+		controller: 'apptCtrl'
+	}).when('/clients', {
+		templateUrl: './components/client/clients.html',
+		controller: 'clientCtrl'
+	}).when('/package', {
+		templateUrl: './components/package/getpackage.html',
+		controller: 'packageCtrl'
+	}).when('/properties', {
+		templateUrl: './components/property/properties.html',
+		controller: 'propertyCtrl'
+	}).when('/users', {
+		templateUrl: './components/user/users.html',
+		controller: 'itemCtrl'
 	})
 		.otherwise({
 			template: '404'
