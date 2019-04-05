@@ -108,7 +108,7 @@ app.controller('loginCtrl', function($scope, $http, $location, user) {
 		var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: 'http://127.0.0.1:3306/angularjs-mysql/server.php',
+			url: 'http://localhost:3000/angularjs-mysql/server.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
