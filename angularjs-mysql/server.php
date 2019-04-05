@@ -4,7 +4,7 @@ header('Content-Type: application/json');
 if (!isset($_POST)) die();
 session_start();
 $response = [];
-$con = new mysqli('localhost', 'root', '', 'propertymanagement');
+$con = new mysqli('localhost', 'root', '', 'propertymanagement', '3306', 'D:/Software/XAMPP/mysql/mysql.sock');
 if ($con->connect_error) die("Connect failed: %s\n(" . $con->connect_errno . ")" . $con->connect_error);
 $username = $con->real_escape_string($_POST['username']);
 $password = $con->real_escape_string($_POST['password']);

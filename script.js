@@ -20,7 +20,7 @@ app.config(function($routeProvider, $locationProvider) {
 				if(!user.isUserLoggedIn()) {
 					$location.path('/login');
 				}
-			},
+			}
 		},
 		templateUrl: './components/dashboard.html',
 		controller: 'dashboardCtrl'
@@ -41,7 +41,7 @@ app.config(function($routeProvider, $locationProvider) {
 		controller: 'propertyCtrl'
 	}).when('/users', {
 		templateUrl: './components/user/users.html',
-		controller: 'itemCtrl'
+		controller: 'userCtrl'
 	})
 		.otherwise({
 			template: '404'
@@ -108,7 +108,7 @@ app.controller('loginCtrl', function($scope, $http, $location, user) {
 		var username = $scope.username;
 		var password = $scope.password;
 		$http({
-			url: 'http://localhost/angularjs-mysql/server.php',
+			url: 'http://127.0.0.1:3306/angularjs-mysql/server.php',
 			method: 'POST',
 			headers: {
 				'Content-Type': 'application/x-www-form-urlencoded'
@@ -145,4 +145,22 @@ app.controller('dashboardCtrl', function($scope, user, $http) {
 			}
 		})
 	};
+});
+
+app.controller('itemCtrl', function($scope, $location) {
+});
+
+app.controller('apptCtrl', function($scope, $location) {
+});
+
+app.controller('clientCtrl', function($scope, $location) {
+});
+
+app.controller('packageCtrl', function($scope, $location) {
+});
+
+app.controller('propertyCtrl', function($scope, $location) {
+});
+
+app.controller('userCtrl', function($scope, $location) {
 });
