@@ -8,6 +8,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "angular": "^1.7.8",
+    "angular-route": "^1.7.8",
     "lite-server": "^2.4.0",
     "mysql": "^2.16.0"
   },
